@@ -63,7 +63,7 @@ function App() {
                     <div className="information-container">
 
                       <section className="field">
-                        <h2 className="field-content">{actor.name}</h2>
+                        <h3 className="field-content card-title">{actor.name}</h3>
                       </section>
 
                       <section className="field">
