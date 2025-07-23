@@ -1,9 +1,9 @@
-const endpoints = {
+const ENDPOINTS = {
 
-    actors: 'https://lanciweb.github.io/demo/api/actors/',
+    ACTORS: 'https://lanciweb.github.io/demo/api/actors/',
 
-    actresses: 'https://lanciweb.github.io/demo/api/actresses/'
+    ACTRESSESS: 'https://lanciweb.github.io/demo/api/actresses/'
 
 }
 
-export default endpoints;
+export default ENDPOINTS;

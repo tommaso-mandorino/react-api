@@ -1,0 +1,61 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0;
+    border: 0.1rem solid black;
+    border-radius: 1rem;
+    padding: 1rem;
+    background-color: white;
+
+    .cardImage {
+        margin: 1rem auto;
+        border: 0.1rem solid black;
+        border-radius: 1rem;
+    }
+
+    .informationContainer {
+
+        padding: 0 1rem;
+
+        .cardTitle {
+            margin: 0 auto;
+            font-size: 1.5rem;
+        }
+
+        .field {
+
+            display: flex;
+            padding: 0.5rem 0;
+
+            .fieldName {
+                padding-right: 0.5rem;
+                font-size: 1rem;
+            }
+
+        }
+
+    }
+
+}
+
+@media screen and (min-width: 768px) {
+
+    .card {
+
+        flex-direction: row;
+
+        .cardImage {
+            margin: 0 auto;
+        }
+
+        .informationContainer {
+
+            .cardTitle {
+                margin: initial;
+            }
+
+        }
+
+    }
+
+}

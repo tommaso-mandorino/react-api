@@ -5,34 +5,22 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 
 // Endpoints importing
-import endopoints from './constants/endpoints.js';
+import ENDPOINTS from './constants/endpoints.js';
+
+// FetchData function importing
+import fetchData from './utils/fetchData.js';
+
+// CardsList component importing
+import CardsList from './components/CardsList/CardsList.jsx';
 
 // App component
 function App() {
 
-  // Fetched data state variable
-  const [fetchedData, setFetchedData] = useState(null);
+  // Actors state variable
+  const [actors, setActors] = useState(null);
 
   // Fetch data useEffect binding
-  useEffect(() => fetchData, []);
-
-
-
-  // Fetch data function
-  function fetchData() {
-
-    // Start fetching
-    fetch(endopoints.actors)
-
-      // Start converting response to JSON
-      .then(response => response.json())
-
-      // Use data
-      .then(data => setFetchedData(data));
-
-  }
-
-
+  useEffect(() => fetchData(ENDPOINTS.ACTORS, setActors), []);
 
   return (
 
@@ -42,63 +30,7 @@ function App() {
 
         <h1 className="page-title">Cast Fetching</h1>
 
-        <section className="actors-container">
-
-          <h2>Actors list</h2>
-
-          <div className="actors-list">
-
-            {
-
-              fetchedData?.map(actor => {
-
-                return (
-
-                  <div key={`card-${actor.id}`} className="card">
-
-                    <div className="image-container">
-                      <img className='card-image' src={actor.image} alt={`${actor.name} photo`} />
-                    </div>
-
-                    <div className="information-container">
-
-                      <section className="field">
-                        <h3 className="field-content card-title">{actor.name}</h3>
-                      </section>
-
-                      <section className="field">
-                        <h6 className="field-name">Year of birth:</h6>
-                        <span className="field-content">{actor.birth_year}</span>
-                      </section>
-
-                      <section className="field">
-                        <h6 className="field-name">Nationality:</h6>
-                        <span className="field-content">{actor.nationality}</span>
-                      </section>
-
-                      <section className="field">
-                        <h6 className="field-name">Biography:</h6>
-                        <span className="field-content">{actor.biography}</span>
-                      </section>
-
-                      <section className="field">
-                        <h6 className="field-name">Awards:</h6>
-                        <span className="field-content">{actor.awards.join(', ')}</span>
-                      </section>
-
-                    </div>
-
-                  </div>
-
-                );
-
-              })
-            
-            }
-
-          </div>
-
-        </section>
+        <CardsList listTitle="Actors List" dataArray={actors} />
 
       </div>
 
