@@ -18,6 +18,8 @@ Creare una piccola app che mostri un elenco di attori/attrici, utilizzando i seg
 
 2. Preparare una card per ciascun attore/attrice, mostrandone le seguenti informazioni:
 
+    - immagine
+
     - nome
 
     - anno nascita
@@ -26,11 +28,7 @@ Creare una piccola app che mostri un elenco di attori/attrici, utilizzando i seg
 
     - biografia
 
-    - immagine
-
     - riconoscimenti
-
-    - immagine
 
 3. Mostrare in pagina una card per ciascun attore/attrice.
 

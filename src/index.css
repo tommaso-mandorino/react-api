@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+}
+
+
+
+html {
+    font-size: 16px;
+    font-family: sans-serif;
+}
+    
+body {
+    background-color: lightgrey;
+}
+
+
+
+.container {
+    margin: 0 auto;
+    padding-bottom: 5rem;
+    max-width: 80%;
+}
+
+.page-title {
+    padding: 1.5rem 0;
+    text-align: center;
+}
+
+.card {
+    display: flex;
+    margin: 1rem 0;
+    border: 0.1rem solid black;
+    border-radius: 1rem;
+    padding: 1rem;
+    background-color: white;
+
+    .card-image {
+        border: 0.1rem solid black;
+        border-radius: 1rem;
+    }
+
+    .information-container {
+
+        padding: 0 1rem;
+
+        .field {
+
+            display: flex;
+            padding: 0.5rem 0;
+
+            .field-name {
+                padding-right: 0.5rem;
+                font-size: 1rem;
+            }
+
+        }
+
+    }
+
+}
